@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: "Roboto", serif;  /* set Roboto font on all texts */
+  background: url('img/dark-background.png') no-repeat center center fixed; /* I totally haven't yoinked this picture */
+  background-size: cover;  /* cover the whole background */
+  color: white;  /* White text */
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+main {
+  padding: 20px;
+}
+
+.about,
+.projects {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);  /* Transparent backgrounds */
+  border-radius: 10px;
+  backdrop-filter: blur(20px);  /* Blurs */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* small shadows */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about:hover,
+.projects:hover {
+  transform: scale(1.02);  /* zooming effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about a {
+  color: #c2c2c2;
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);  /* footer also has some blur */
+  margin-top: 30px;
+}
+
+footer a {
+  color: #ababab;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+header {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;  /* image and text spacing */
+}
+
+.header-content img {
+  width: 100px;  /* img size */
+  height: 100px;
+  border-radius: 50%;  /* Make it round */
+  border: 2px solid white;  /* White border */
+
+}
+
+.header-text {
+  text-align: left;
+  /* Alinea el texto a la izquierda */
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2rem; /* Title size */
+}
+
+.header-text p {
+  margin: 5px 0 0;
+  font-size: 1.2rem; /* Paragraph (subtitle) size */
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #6d6d6d; /* Cambia este color si prefieres otro */
+}
+
+.projects {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Autp adjust the grid */
+  gap: 20px; /* spece beetwen items */
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain; /* contain the proyect image */
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 0 10px 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.project-buttons .btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #424242;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.project-buttons .btn:hover {
+  background: #343434;
+}
