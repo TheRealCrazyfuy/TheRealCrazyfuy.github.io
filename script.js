@@ -18,3 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 function isWindows() {
   return navigator.userAgent.includes("Windows") || navigator.platform.includes("Win");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sidebar = document.getElementById('sidebar');
+  const toggleBtn = document.getElementById('toggle-arrow');
+
+  toggleBtn.addEventListener('click', function () {
+    sidebar.classList.toggle('open');
+    sidebar.classList.toggle('closed');
+  });
+});

@@ -1,0 +1,121 @@
+#sidebar.open~#content {
+    display: none !important;
+}
+
+#sidebar {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    height: 70px;
+    width: 40px;
+    background: #1a1a1a;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+    z-index: 1001;
+    transition: left 0.3s, width 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+}
+
+#sidebar.open {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    border-radius: 10px;
+}
+
+#toggle-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+#sidebar.open #toggle-arrow i {
+    transform: rotate(180deg);
+}
+
+#sidebar-content {
+    display: none;
+    background-color: #181818;
+    margin-top: 40px;
+    width: 480px;
+    text-align: center;
+    padding: 40px;
+}
+
+#sidebar.open #sidebar-content {
+    display: block;
+}
+
+.click-game {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .click-game {
+        flex-direction: column;
+    }
+
+    #sidebar-content {
+        width: 400px;
+        padding: 20px;
+    }
+}
+
+.click-stats {
+    width: 300px;
+}
+
+.upgrade-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #424242;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.upgrade-button:enabled:hover {
+    background-color: #343434;
+}
+
+.upgrade-button:disabled {
+    background-color: #151515;
+    cursor: not-allowed;
+}
+
+#click-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #f54a01;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+#click-button:hover {
+    background-color: #e04301;
+}
+
+#click-count,
+#click-rate {
+    font-size: 18px;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}

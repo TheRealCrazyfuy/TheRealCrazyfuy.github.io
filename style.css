@@ -1,9 +1,13 @@
 body {
   margin: 0;
-  font-family: "Roboto", serif;  /* set Roboto font on all texts */
-  background: url('img/dark-background.png') no-repeat center center fixed; /* I totally haven't yoinked this picture */
-  background-size: cover;  /* cover the whole background */
-  color: white;  /* White text */
+  font-family: "Roboto", serif;
+  /* set Roboto font on all texts */
+  background: url('img/dark-background.png') no-repeat center center fixed;
+  /* I totally haven't yoinked this picture */
+  background-size: cover;
+  /* cover the whole background */
+  color: white;
+  /* White text */
   overflow-x: hidden;
 }
 
@@ -20,16 +24,20 @@ main {
   margin: 20px auto;
   padding: 20px;
   max-width: 800px;
-  background: rgba(255, 255, 255, 0.1);  /* Transparent backgrounds */
+  background: rgba(255, 255, 255, 0.1);
+  /* Transparent backgrounds */
   border-radius: 10px;
-  backdrop-filter: blur(20px);  /* Blurs */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* small shadows */
+  backdrop-filter: blur(20px);
+  /* Blurs */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* small shadows */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about:hover,
 .projects:hover {
-  transform: scale(1.02);  /* zooming effect */
+  transform: scale(1.02);
+  /* zooming effect */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -47,7 +55,8 @@ footer {
   text-align: center;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);  /* footer also has some blur */
+  backdrop-filter: blur(20px);
+  /* footer also has some blur */
   margin-top: 30px;
 }
 
@@ -71,14 +80,18 @@ header {
 .header-content {
   display: flex;
   align-items: center;
-  gap: 20px;  /* image and text spacing */
+  gap: 20px;
+  /* image and text spacing */
 }
 
 .header-content img {
-  width: 100px;  /* img size */
+  width: 100px;
+  /* img size */
   height: 100px;
-  border-radius: 50%;  /* Make it round */
-  border: 2px solid white;  /* White border */
+  border-radius: 50%;
+  /* Make it round */
+  border: 2px solid white;
+  /* White border */
 
 }
 
@@ -89,12 +102,14 @@ header {
 
 .header-text h1 {
   margin: 0;
-  font-size: 2rem; /* Title size */
+  font-size: 2rem;
+  /* Title size */
 }
 
 .header-text p {
   margin: 5px 0 0;
-  font-size: 1.2rem; /* Paragraph (subtitle) size */
+  font-size: 1.2rem;
+  /* Paragraph (subtitle) size */
 }
 
 .social-icons {
@@ -111,7 +126,8 @@ header {
 }
 
 .social-icons a:hover {
-  color: #6d6d6d; /* Cambia este color si prefieres otro */
+  color: #6d6d6d;
+  /* Cambia este color si prefieres otro */
 }
 
 .projects {
@@ -128,8 +144,10 @@ header {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Autp adjust the grid */
-  gap: 20px; /* spece beetwen items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Autp adjust the grid */
+  gap: 20px;
+  /* spece beetwen items */
 }
 
 .project-card {
@@ -148,7 +166,8 @@ header {
 .project-card img {
   width: 100%;
   height: 150px;
-  object-fit: contain; /* contain the proyect image */
+  object-fit: contain;
+  /* contain the proyect image */
 }
 
 .project-card h3 {
@@ -184,29 +203,29 @@ header {
 }
 
 #activate-windows {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    z-index: 9999;
-    background: transparent;
-    color: rgba(255,255,255,0.7);
-    font-size: 16px;
-    font-family: "Segoe UI", Arial, sans-serif;
-    text-align: left;
-    pointer-events: none;
-    user-select: none;
-    display: none;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 9999;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+  display: none;
 }
 
 #activate-windows-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-    color: rgba(255,255,255,0.5);
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #go-to-settings-label {
-    display: block;
-    font-size: 14px;
-    color: rgba(255,255,255,0.5);
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
 }

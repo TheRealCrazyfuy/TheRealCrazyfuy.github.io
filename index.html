@@ -8,6 +8,7 @@
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loadingStuff.css">
+    <link rel="stylesheet" href="gamestyles.css">
     <!--Google Roboto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,35 @@
     <!-- Loading screen -->
     <div id="loader">
         <div class="spinner"></div>
+    </div>
+
+    <div id="sidebar" class="closed">
+        <button id="toggle-arrow" aria-label="Toggle sidebar">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div id="sidebar-content">
+            <div class="click-game">
+                <div class="click-stats">
+                    <h2>Abeja's clicking game :)</h2>
+                    <button id="click-button">Click me!</button>
+                    <p id="click-count">Clicks: 0</p>
+                    <p id="click-rate">Clicks per second: 0</p>
+                </div>
+
+                <div class="purchase-section">
+                    <h3>Upgrades</h3>
+                    <button class="upgrade-button" id="upgrade-1">
+                        0x - Hire a friend (+1 CPS) - Cost: 10 clicks
+                    </button>
+                    <button class="upgrade-button" id="upgrade-2">
+                        0x - Ask family (+5 CPS) - Cost: 50 clicks
+                    </button>
+                    <button class="upgrade-button" id="upgrade-3">
+                        0x - Ask people outside (+20 CPS) - Cost: 200 clicks
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--Header-->
@@ -101,8 +131,8 @@
                         <h3>SideQuest</h3>
                         <p>Self Role and help guide discord bot for the REDMAGIC discord server.</p>
                         <div class="project-buttons">
-                            <a href="https://github.com/TheRealCrazyfuy/SideQuest-Bot" target="_blank"
-                                class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+                            <a href="https://github.com/TheRealCrazyfuy/SideQuest-Bot" target="_blank" class="btn"><i
+                                    class="fab fa-github"></i> View on GitHub</a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -130,6 +160,7 @@
             </footer>
 
             <script src="script.js"></script>
+            <script src="clickgame.js"></script>
         </main>
     </div>
 
