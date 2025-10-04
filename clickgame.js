@@ -94,5 +94,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    function saveGame() {
+        const gameState = {
+            clickCount,
+            lastClickCount,
+            upgradeCPS,
+            upgrades
+        };
+        localStorage.setItem("clickGameState", JSON.stringify(gameState));
+    }
+
+    function loadGame() {
+        const savedState = localStorage.getItem("clickGameState");
+        if (savedState) {
+            const gameState = JSON.parse(savedState);
+            clickCount = gameState.clickCount || 0;
+            lastClickCount = gameState.lastClickCount || 0;
+            upgradeCPS = gameState.upgradeCPS || 0;
+            gameState.upgrades.forEach((savedUpg, index) => {
+                if (upgrades[index]) {
+                    upgrades[index].quantity = savedUpg.quantity || 0;
+                    upgrades[index].cost = savedUpg.cost || upgrades[index].ogcost;
+                    const btn = document.getElementById(upgrades[index].id);
+                    btn.textContent = `${upgrades[index].quantity}x - ${btn.textContent.split('-')[1]}- Cost: ${upgrades[index].cost} clicks`;
+                }
+            });
+            clickCountDisplay.textContent = `Clicks: ${clickCount}`;
+            checkUpgradeButtons();
+        }
+    }
+
+    // Save game every 10 seconds
+    setInterval(saveGame, 10000);
+
+    // Load game on start
+    loadGame();
+
 });
 
